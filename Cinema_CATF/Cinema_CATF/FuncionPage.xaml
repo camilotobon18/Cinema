@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cinema_CATF.FuncionPage"
+             Title="Funciones">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="20">
+            <StackLayout Orientation="Horizontal">
+                  <Label Text="Titulo: "/>
+                  <Label  Text="{Binding Nombre}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                  <Label Text="Fecha: "/>
+                  <Label  Text="{Binding FechaEstreno}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                  <Label Text="Cantidad de Boletas: "/>
+                  <Entry HorizontalOptions="FillAndExpand" x:Name="entryCantidad"/>
+            </StackLayout>
+            <ListView HasUnevenRows="True" ItemSelected="Funcion_Selected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" >
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Cinema}"/>
+                                    <Label Text="{Binding Sala}"/>
+                                    <Label Text="{Binding Ciudad}"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Label Text="Precio: "/>
+                                    <Label Text="{Binding Precio}"/>
+                                </StackLayout>
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+  
+    </ContentPage.Content>
+</ContentPage>
