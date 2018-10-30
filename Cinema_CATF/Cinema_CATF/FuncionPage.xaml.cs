@@ -18,6 +18,7 @@ namespace Cinema_CATF
             InitializeComponent();
             
             BindingContext = pelicula;
+            listFunciones.ItemsSource = pelicula.Funciones;
 
         }
 

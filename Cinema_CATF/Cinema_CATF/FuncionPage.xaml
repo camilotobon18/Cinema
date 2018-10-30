@@ -17,7 +17,7 @@
                   <Label Text="Cantidad de Boletas: "/>
                   <Entry HorizontalOptions="FillAndExpand" x:Name="entryCantidad"/>
             </StackLayout>
-            <ListView HasUnevenRows="True" ItemSelected="Funcion_Selected">
+            <ListView x:Name="listFunciones" HasUnevenRows="True" ItemSelected="Funcion_Selected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
